@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import BookAppointments from "./components/BookAppointments";
 import TopBar from './components/TopBar';
-
+import { useEffect } from 'react';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -16,6 +16,10 @@ function App() {
     i18n.changeLanguage(lng);
     document.dir = lng === 'Ar' ? 'rtl' : 'ltr';
   };
+
+  useEffect(() => {
+  document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+}, [i18n.language]);
   return (
     <>
     {/* <Footer/> */}
