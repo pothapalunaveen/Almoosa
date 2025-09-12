@@ -5,8 +5,9 @@ import { useTranslation } from 'react-i18next';
 import './i18n';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import BookAppointments from "./components/BookAppointments";
+import {BookAppointments }from "./components/BookAppointments";
 import TopBar from './components/TopBar';
+import Login from './components/Login';
 
 
 function App() {
@@ -21,12 +22,15 @@ function App() {
     {/* <Footer/> */}
    
     <Router>
-      <TopBar/>
-       <Header/>
+       <TopBar/>
+       <Header/> 
+       
        
        <Routes>
-         <Route path="/book-appointments" element={<BookAppointments />} />
+         {/* <Route path="/book-appointments" element={<BookAppointments />} /> */}
+
        </Routes>
+         <Login/>  
      
     </Router>
       </>
