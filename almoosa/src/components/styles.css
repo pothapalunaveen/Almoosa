@@ -1,0 +1,586 @@
+/* Main Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+.building-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.logo {
+  width: 160px;
+}
+
+.welcome-text {
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.welcome-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-patient,
+.btn-doctor {
+  display: block;
+  width: 220px;
+  padding: 12px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-patient {
+  background: #28a745;
+  color: white;
+}
+
+.btn-patient:hover {
+  background: #218838;
+}
+
+.btn-doctor {
+  background: #007bff;
+  color: white;
+}
+
+.btn-doctor:hover {
+  background: #0056b3;
+}
+
+/* Right Panel */
+.right-panel {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  background: #fdfdfd;
+  padding: 20px;
+   overflow-y: auto;   /* ✅ enables vertical scrolling */
+  max-height: 100vh; 
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dots span.active {
+  background: #007bff;
+}
+
+/* Login Section */
+.right-section {
+  margin-top: 20px;
+}
+
+.top-login {
+  background: #eef3f8;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.top-login p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.btn-group {
+  margin-top: 10px;
+}
+
+.btn-login,
+.btn-register {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-login {
+  background: #007bff;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #0056b3;
+}
+
+.btn-register {
+  background: #28a745;
+  color: white;
+}
+
+.btn-register:hover {
+  background: #218838;
+}
+
+/* Title */
+.title {
+  margin: 20px 0 15px;
+  font-size: 1.5rem;
+  color: #2b4e66;
+  text-align: left;
+}
+
+/* Services Grid */
+
+ .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+}
+
+
+.card {
+  background: white;
+ padding: 30px 20px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: red;
+  color: white;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.card.highlight {
+  border: 2px solid black;
+  background-color: green;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-panel {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .building-image {
+    position: relative;
+    height: 250px;
+  }
+
+  .welcome-text {
+    position: relative;
+    color: #000;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+/* new css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  position: relative;
+}
+
+.left-panel {
+  background-color: #f5f5f5;
+  position:relative;
+  
+}
+
+.building-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: white;
+}
+
+.welcome-text h1 {
+  font-size: 36px;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.btn-patient,
+.btn-doctor {
+  display: block;
+  width: 250px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-patient {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-doctor {
+  background-color: #e0e0e0;
+  color: black;
+} 
+
+
+
+.right-panel {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+   overflow-y: auto;   /* ✅ enables vertical scrolling */
+  max-height: 100vh; 
+}
+
+.hospital-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-content {
+  max-width: 50%;
+  direction: rtl;
+}
+
+.text-content h3,
+.text-content h4 {
+  margin: 5px 0;
+}
+
+.arabic-message {
+  font-size: 32px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.dots {
+  display: flex;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: #4caf50;
+}
+
+.group-image {
+  height: 250px;
+  object-fit: contain;
+}
+
+.login-section {
+  background-color: #f0f7ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login-section p {
+  font-size: 16px;
+}
+
+.login-buttons {
+  margin-top: 15px;
+}
+.logo-container {
+  position: absolute;
+  top: 20px;   /* adjust spacing */
+  left: 20px;  /* adjust spacing */
+  z-index: 2;
+}
+
+.logo {
+  width: 80px;   /* adjust size */
+  height: auto;
+}
+
+
+.btn-login,
+.btn-register {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-login {
+  background-color: #1e3a5f;
+  color: white;
+}
+
+.btn-register {
+  background-color: #4caf50;
+  color: white;
+}
+.image-content {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gray;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #007bff;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow:visible;
+  border-radius: 12px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slide-text {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  text-align: right;
+  color: #003366;
+}
+
+.slide-text h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.slide-text h4 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #004d00;
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: green;
+}
+
+/* Arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.right-panel {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  flex: 0 0 62%; 
+
+  /* ✅ Enable vertical scroll */
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+/* Optional: styled scrollbar */
+.right-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right-panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.right-panel::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
