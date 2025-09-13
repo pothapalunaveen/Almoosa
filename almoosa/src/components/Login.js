@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-
+import { useTranslation } from "react-i18next";
+import "../i18n"; 
 import "./styles.css";
 
 const Login = () => {
-  
-   const slides = [
+  const { t } = useTranslation();
+
+  const slides = [
     { img: "/Images/Pictures/Almoosa1.jpeg" },
     { img: "/Images/Pictures/Almoosa2.jpeg" },
     { img: "/Images/Pictures/Almoosa3.png" },
@@ -22,35 +24,35 @@ const Login = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const services = [
-    { title: "Remote Consultation", icon: "👨‍💻", isNew: true, color: "green" },
-    { title: "On-site Consultation", icon: "👨‍⚕" },
-    { title: "Check Symptoms", icon: "✅" },
-    { title: "Health Education", icon: "⚛" },
-    { title: "Virtual Tour", icon: "🧍" },
-    { title: "Contact Us", icon: "💻" },
-    { title: "Find Doctor", icon: "🩺" },
-    { title: "E-Pharmacy", icon: "🖥" },
+    { title: "services.remote", icon: "👨‍💻", isNew: true, color: "green" },
+    { title: "services.onsite", icon: "👨‍⚕" },
+    { title: "services.symptoms", icon: "✅" },
+    { title: "services.education", icon: "⚛" },
+    { title: "services.tour", icon: "🧍" },
+    { title: "services.contact", icon: "💻" },
+    { title: "services.doctor", icon: "🩺" },
+    { title: "services.pharmacy", icon: "🖥" },
   ];
-
-
-
 
   return (
     <div className="container">
       {/* Left Panel */}
       <div className="left-panel">
-        <img src="/Images/Pictures/home_page1.jpg" alt="Almoosa Building" className="building-image" />
+        <img
+          src="/Images/Pictures/home_page1.jpg"
+          alt="Almoosa Building"
+          className="building-image"
+        />
         <div className="logo-container">
-    <img src="/Images/Pictures/Almoosalog.svg" alt="Logo" className="logo" />
-  </div>
-        
+          <img src="/Images/Pictures/Almoosalog.svg" alt="Logo" className="logo" />
+        </div>
+
         <div className="welcome-text">
-        
-          <h2>Welcome to</h2>
-          <h1>Almoosa Health</h1>
+          <h2>{t("login.welcomeTo")}</h2>
+          <h1>{t("login.almoosa")}</h1>
           <div className="button-group">
-            <button className="btn-patient">Continue as a Patient</button>
-            <button className="btn-doctor">Continue as a Doctor</button>
+            <button className="btn-patient">{t("login.patientBtn")}</button>
+            <button className="btn-doctor">{t("login.doctorBtn")}</button>
           </div>
         </div>
       </div>
@@ -58,18 +60,13 @@ const Login = () => {
       {/* Right Panel */}
       <div className="right-panel">
         <div className="carousel">
-          {/* Slide */}
           <div className="slide">
             <img
               src={slides[currentIndex].img}
-              alt={slides[currentIndex].title}
+              alt={`slide-${currentIndex}`}
               className="slide-image"
             />
-            
           </div>
-
-        
-          
 
           {/* Dots */}
           <div className="dots">
@@ -84,30 +81,26 @@ const Login = () => {
         </div>
 
         <div className="login-section">
-          <p>
-            To browse your medical file and book appointments, please login or
-            register now.
-          </p>
+          <p>{t("login.message")}</p>
           <div className="login-buttons">
-            <button className="btn-login">Login</button>
-            <button className="btn-register">Register</button>
+            <button className="btn-login">{t("login.loginBtn")}</button>
+            <button className="btn-register">{t("login.registerBtn")}</button>
           </div>
         </div>
-        <h2 className="title">Let's Consult With Our Specialist Today</h2>
-          <div className="grid">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`card ${
-                  service.color === "green" ? "highlight" : ""
-                }`}
-              >
-                {service.isNew && <span className="badge">New</span>}
-                <div className="icon">{service.icon}</div>
-                <p>{service.title}</p>
-              </div>
-            ))}
-          </div>
+
+        <h2 className="title">{t("login.consultTitle")}</h2>
+        <div className="grid">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`card ${service.color === "green" ? "highlight" : ""}`}
+            >
+              {service.isNew && <span className="badge">{t("login.new")}</span>}
+              <div className="icon">{service.icon}</div>
+              <p>{t(service.title)}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

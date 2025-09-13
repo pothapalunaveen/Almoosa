@@ -225,6 +225,32 @@
   font-size: 2rem;
   margin-bottom: 8px;
 }
+.lang-switcher {
+  position: fixed;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* LTR: button on right */
+html[dir="ltr"] .lang-switcher {
+  right: 20px;
+}
+
+/* RTL: button on left */
+html[dir="rtl"] .lang-switcher {
+  left: 20px;
+}
+
 
 .badge {
   position: absolute;

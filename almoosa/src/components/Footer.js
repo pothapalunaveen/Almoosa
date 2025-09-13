@@ -1,11 +1,13 @@
 import React from "react";
 import "./Footer.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
   return (
     <footer className="footer">
       <div className="footer-container">
-        
+
         {/* Left Section */}
         <div className="footer-left">
           <div className="footer-logo">
@@ -25,7 +27,7 @@ const Footer = () => {
 
           {/* Useful Links */}
           <div className="useful-links">
-            <h4>USEFUL LINKS</h4>
+            <h4>{t('USEFUL LINKS')}</h4>
             <ul>
               <li><a href="#">About Almoosa</a></li>
               <li><a href="#">Academic Affair</a></li>
@@ -39,7 +41,7 @@ const Footer = () => {
             <h4>SOCIAL MEDIA</h4>
             <div className="social-icons">
               <a href="#"><img src="/Images/twitter-icon.svg" alt="Twitter" /></a>
-              <a href="#"><img src="/Images/instagram-icon.svg"alt="Instagram" /></a>
+              <a href="#"><img src="/Images/instagram-icon.svg" alt="Instagram" /></a>
               <a href="#"><img src="/Images/youtube-icon.svg" alt="YouTube" /></a>
               <a href="#"><img src="/Images/linkedin-icon.svg" alt="LinkedIn" /></a>
             </div>
@@ -49,11 +51,11 @@ const Footer = () => {
         {/* Right Section */}
         <div className="footer-right">
           <h4>
-            For any concerns of misconduct or unethical behavior, we encourage confidential reporting without retaliation through
+            {t('For any concerns of misconduct or unethical behavior, we encourage confidential reporting without retaliation through')}  
           </h4>
-          <a href="mailto:whistleblower@almoosahealth.com.sa" className="footer-mail"></a>
-            <p>whistleblower@almoosahealth.com.sa</p>
-          
+              < a href = "mailto:whistleblower@almoosahealth.com.sa" className = "footer-mail" ></a>
+          <p>whistleblower@almoosahealth.com.sa</p>
+
 
           {/* App Download */}
           <div className="download-app">

@@ -1,1 +1,81 @@
-{}
+{
+  "patientsPortal": "Patients Portal",
+  "volunteering": "Volunteering",
+  "joinTeam": "Join Our Team",
+  "investorRelations": "Investor Relations",
+  "search": "Search",
+
+  "aboutUs": "About Us",
+  "ventures": "Hospitals & Ventures",
+  "service": "Services",
+  "ourDoctors": "Our Doctors",
+  "medicalTourism": "Medical Tourism",
+  "patientsVisitors": "For Patients & Visitors",
+  "academicAffairs": "Academic Affairs",
+  "awards": "Awards",
+  "mediaCenter": "Media Center",
+  "bookAppointment": "Book Appointment",
+
+  "aboutUsDesc": "Almoosa Health is a leading health care provider in the Eastern Province of Saudi Arabia. Since opening the first private hospital in Al-Ahsa in 1996, the group has grown into a network of leading healthcare facilities recognized globally.",
+  "almoosaHealth": "Almoosa Health →",
+  "communityServices": "Community Services",
+  "boardOfGovernors": "Board Of Governors",
+  "leadershipTeam": "Leadership Team",
+  "contactUs": "Contact Us",
+
+  "venture1": "Almoosa Specialist Hospital, Ahsa",
+  "venture2": "Almoosa Rehabilitation Hospital",
+  "venture3": "Almoosa Health – Al Nakheel Medical Center",
+  "venture4": "Almoosa Specialist Hospital, Hufof (under construction)",
+  "venture5": "Almoosa Specialist Hospital, Khobar (under construction)",
+  "pharmacies": "Pharmacies",
+
+  "patientsVisitorsDesc": "The For Patients & Visitors section provides essential information, guidelines, and resources tailored to enhance the experience and understanding of individuals seeking medical care or visiting a healthcare facility.",
+  "patientGuide": "Patient Guide",
+  "generalInfo": "General Information",
+
+  "academicAffairsDesc": "The Training Centre section offers a comprehensive overview of upcoming events, courses, and educational opportunities, tailored to meet the needs and interests of individuals seeking to enhance their skills and knowledge in a specific field.",
+  "eventsCourses": "Events & Courses",
+
+
+  "login": {
+    "welcomeTo": "Welcome to",
+    "almoosa": "Almoosa Health",
+    "patientBtn": "Continue as a Patient",
+    "doctorBtn": "Continue as a Doctor",
+    "message": "To browse your medical file and book appointments, please login or register now.",
+    "loginBtn": "Login",
+    "registerBtn": "Register",
+    "consultTitle": "Let's Consult With Our Specialist Today",
+    "new": "New"
+  },
+  "services": {
+    "remote": "Remote Consultation",
+    "onsite": "On-site Consultation",
+    "symptoms": "Check Symptoms",
+    "education": "Health Education",
+    "tour": "Virtual Tour",
+    "contact": "Contact Us",
+    "doctor": "Find Doctor",
+    "pharmacy": "E-Pharmacy"
+  },
+  
+ 
+    "usefulLinks": "USEFUL LINKS",
+    "about": "About Almoosa",
+    "academic": "Academic Affair",
+    "doctors": "Our Doctors",
+    "services": "Services",
+    "socialMedia": "SOCIAL MEDIA",
+    "misconductMsg": "For any concerns of misconduct or unethical behavior, we encourage confidential reporting without retaliation through",
+    "downloadTitle": "DOWNLOAD ALMOOSA APP",
+    "downloadDesc": "To view your medical record, get your monthly medication, and enjoy the e-payment service. Any time and from anywhere",
+    "twitterMsg": "Stay up to date with our news",
+    "twitterBtn": "Go to Twitter",
+    "copyRight": "ALMOOSA HOSPITAL © 2025 All Rights Reserved",
+    "privacyPolicy": "Privacy Policy"
+  
+
+
+
+}

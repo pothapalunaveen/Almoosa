@@ -1,12 +1,12 @@
+// src/components/Header.js
 import React, { useState } from "react";
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 import "./Header.css";
-
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
+  const { t } = useTranslation();
 
   const toggleMenu = (menu) => {
     setActiveMenu(activeMenu === menu ? null : menu);
@@ -19,18 +19,18 @@ const Header = () => {
         <div className="navbar">
           {/* Logo */}
           <div className="logo">
-            <img src="/Images/logo-almoosahealthgroup-scaled-1.webp" alt="Almoosa Health" />
+            <img
+              src="/Images/logo-almoosahealthgroup-scaled-1.webp"
+              alt="Almoosa Health"
+            />
           </div>
 
           {/* Navigation */}
           <nav className="nav">
             <ul className="nav-links">
               <li>
-                <button
-                  className="nav-btn"
-                  onClick={() => toggleMenu("about")}
-                >
-                  About Us ▾
+                <button className="nav-btn" onClick={() => toggleMenu("about")}>
+                  {t("aboutUs")} ▾
                 </button>
               </li>
               <li>
@@ -38,18 +38,24 @@ const Header = () => {
                   className="nav-btn"
                   onClick={() => toggleMenu("ventures")}
                 >
-                  Hospitals & Ventures ▾
+                  {t("ventures")} ▾
                 </button>
               </li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Our Doctors</a></li>
-              <li><a href="#">Medical Tourism</a></li>
+              <li>
+                <a href="#">{t("service")}</a>
+              </li>
+              <li>
+                <a href="#">{t("ourDoctors")}</a>
+              </li>
+              <li>
+                <a href="#">{t("medicalTourism")}</a>
+              </li>
               <li>
                 <button
                   className="nav-btn"
                   onClick={() => toggleMenu("patients")}
                 >
-                  For Patients & Visitors ▾
+                  {t("patientsVisitors")} ▾
                 </button>
               </li>
               <li>
@@ -57,21 +63,31 @@ const Header = () => {
                   className="nav-btn"
                   onClick={() => toggleMenu("academics")}
                 >
-                  Academic Affairs ▾
+                  {t("academicAffairs")} ▾
                 </button>
               </li>
-              <li><a href="#">Awards</a></li>
-              <li><a href="#">Media Center</a></li>
+              <li>
+                <a href="#">{t("awards")}</a>
+              </li>
+              <li>
+                <a href="#">{t("mediaCenter")}</a>
+              </li>
             </ul>
           </nav>
 
           {/* CTA Button */}
           <div className="appointment">
-           {/*  <a href="Health.js" className="btn">Book appointment</a>  */}
-            <Link to="/Components/BookAppointments" className="btn">
-          Book Appointment
-        </Link>
+            <a
+              href="/book-appointments"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              {t("bookAppointment")}
+            </a>
           </div>
+
+
         </div>
       </header>
 
@@ -79,21 +95,26 @@ const Header = () => {
       {activeMenu === "about" && (
         <div className="mega-menu">
           <div className="mega-left">
-            <h1>About Us</h1>
-            <p>
-              Almoosa Health is a leading health care provider in the Eastern
-              Province of Saudi Arabia. Since opening the first private hospital
-              in Al-Ahsa in 1996, the group has grown into a network of leading
-              healthcare facilities recognized globally.
-            </p>
+            <h1>{t("aboutUs")}</h1>
+            <p>{t("aboutUsDesc")}</p>
           </div>
           <div className="mega-right">
             <ul>
-              <li><a href="#">Almoosa Health →</a></li>
-              <li><a href="#">Community Services</a></li>
-              <li><a href="#">Board Of Governors</a></li>
-              <li><a href="#">Leadership Team</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li>
+                <a href="#">{t("almoosaHealth")}</a>
+              </li>
+              <li>
+                <a href="#">{t("communityServices")}</a>
+              </li>
+              <li>
+                <a href="#">{t("boardOfGovernors")}</a>
+              </li>
+              <li>
+                <a href="#">{t("leadershipTeam")}</a>
+              </li>
+              <li>
+                <a href="#">{t("contactUs")}</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -102,67 +123,70 @@ const Header = () => {
       {activeMenu === "ventures" && (
         <div className="mega-menu">
           <div className="mega-left">
-            <h1>Hospitals & Ventures</h1>
-
+            <h1>{t("ventures")}</h1>
           </div>
           <div className="mega-right">
             <ul>
-              <li><a href="#">Almoosa Specialist Hospital,Ahsa</a></li>
-              <li><a href="#">Almoosa Rehabilitation Hospital</a></li>
-              <li><a href="#">Almoosa Health – Al Nakheel Medical Center</a></li>
-              <li><a href="#">Almoosa Specialist Hospital ,Hufof "under construction"</a></li>
-              <li><a href="#">Almoosa Specialist Hospital ,Khobar "under construction"l</a></li>
-              <li><a href="#">Pharmacies</a></li>
+              <li>
+                <a href="#">{t("venture1")}</a>
+              </li>
+              <li>
+                <a href="#">{t("venture2")}</a>
+              </li>
+              <li>
+                <a href="#">{t("venture3")}</a>
+              </li>
+              <li>
+                <a href="#">{t("venture4")}</a>
+              </li>
+              <li>
+                <a href="#">{t("venture5")}</a>
+              </li>
+              <li>
+                <a href="#">{t("pharmacies")}</a>
+              </li>
             </ul>
           </div>
         </div>
       )}
+
       {activeMenu === "patients" && (
         <div className="mega-menu">
           <div className="mega-left">
-            <h1>For Patients & Visitors</h1>
-            <p>The For Patients & Visitors section provides essential information, guidelines, 
-              and resources tailored to enhance the experience and understanding of individuals 
-              seeking medical care or visiting a healthcare facility.
-              </p>
-
+            <h1>{t("patientsVisitors")}</h1>
+            <p>{t("patientsVisitorsDesc")}</p>
           </div>
           <div className="mega-right">
             <ul>
-              <li><a href="#">Patient Guide</a></li>
-              <li><a href="#">General Information</a></li>
-              
+              <li>
+                <a href="#">{t("patientGuide")}</a>
+              </li>
+              <li>
+                <a href="#">{t("generalInfo")}</a>
+              </li>
             </ul>
           </div>
         </div>
       )}
 
-
-       {activeMenu === "academics" && (
+      {activeMenu === "academics" && (
         <div className="mega-menu">
           <div className="mega-left">
-            <h1>Academic Affairs</h1>
-            <p>The Training Centre section offers a comprehensive overview of upcoming events, courses, 
-              and educational opportunities, tailored to meet the needs and interests of individuals 
-              seeking to enhance their skills and knowledge in a specific field.
-              </p>
-
+            <h1>{t("academicAffairs")}</h1>
+            <p>{t("academicAffairsDesc")}</p>
           </div>
           <div className="mega-right">
             <ul>
-              <li><a href="#">Academic Affairs</a></li>
-              <li><a href="#">Events & Courses</a></li>
-              
+              <li>
+                <a href="#">{t("academicAffairs")}</a>
+              </li>
+              <li>
+                <a href="#">{t("eventsCourses")}</a>
+              </li>
             </ul>
           </div>
         </div>
       )}
-
-
-     
-
-
-
     </>
   );
 };
