@@ -9,6 +9,8 @@ import {BookAppointments }from "./components/BookAppointments";
 import TopBar from './components/TopBar';
 import Login from './components/Login';
 import { useEffect } from 'react';
+import Almoosa from './components/Almoosa';
+import Service from './components/Service';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -23,7 +25,8 @@ function App() {
 }, [i18n.language]);
   return (
     <>
-    {/* <Footer/> */}
+     <div dir = {i18n.language === 'ar' ? "rtl" : "ltr"}> 
+     {/* <Footer/>  */}
    
     <Router>
        <TopBar/>
@@ -31,13 +34,19 @@ function App() {
        
        
        <Routes>
-         {/* <Route path="/book-appointments" element={<BookAppointments />} /> */}
+          <Route path="/book-appointments" element={<BookAppointments />} />
 
-       </Routes>
-         <Login/>  
-     
-    </Router>
+        </Routes>
+         {/* <Login/>  */}
+         <Almoosa/>
+      
+       <Service/>  
+           <Footer/>   
+           
+    </Router> 
+     </div> 
       </>
+  
 
     
      
