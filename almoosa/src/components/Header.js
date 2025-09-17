@@ -78,7 +78,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="appointment">
-            <Link to="/Components/BookAppointments" className="btn">
+            <Link to="/book-appointments" className="btn">
               {t("Book Appointment")}
             </Link>
           </div>
