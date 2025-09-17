@@ -1,37 +1,37 @@
-// ServicesGrid.js
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Service.css';
 
 const Service = () => {
-  const services = [
+  const { t } = useTranslation();
+
+  const cardData = [
     {
-      id: 1,
-      img: 'Images/Pictures/shutter1.jpg',
-      alt: 'Doctor Icon',
+      icon: '/Images/Pictures/shutter1.jpg',
+      label: t('400 Doctors'),
     },
     {
-      id: 2,
-      img: 'Images/Pictures/shutter4.jpg',
-      alt: 'Nurse Icon',
+      icon: '/Images/Pictures/shutter4.jpg',
+      label: t('3000 Caregivers'),
     },
     {
-      id: 3,
-      img: 'Images/Pictures/shutter2.jpg',
-      alt: 'Hospital Bed Icon',
+      icon: '/Images/Pictures/shutter3.jpg',
+      label: t('430 Beds'),
     },
     {
-      id: 4,
-      img: 'Images/Pictures/shutter3.jpg',
-      alt: 'Patient Icon',
+      icon: '/Images/Pictures/shutter2.png',
+      label: t('240 Clinics'),
     },
   ];
 
   return (
-    <div className="services-section">
-      <div className="services-grid">
-        {services.map((service) => (
-          <div key={service.id} className="service-card">
-            <img src={service.img} alt={service.alt} />
+    <div className="capacity-container">
+      <h2 className="capacity-title">{t("Almoosa Capacity")}</h2>
+      <div className="card-grid">
+        {cardData.map((item, index) => (
+          <div className="card" key={index}>
+            <img src={item.icon} alt={`Icon ${index + 1}`} className="card-icon" />
+            <p className="card-label">{item.label}</p>
           </div>
         ))}
       </div>
